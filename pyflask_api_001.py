@@ -68,7 +68,7 @@ def home():
             return render_template("shop.html")
         else:
             session['logged_in_flag'] = False
-            return redirect(url_for('login'))
+            return redirect(url_for('index'))
     else:
         return redirect(url_for('login'))
     ### Security reason /auto logout because user don't have enough permission
