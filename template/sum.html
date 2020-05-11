@@ -1,0 +1,23 @@
+{% extends 'homemenu.html' %}
+{% block title %}Shop List{% endblock %}
+{% block nav %}
+<li>
+    <a href="/summary">Summary Report</a>
+</li>
+<li>
+    <a href="/todayorder">Today Orders</a>
+</li>
+<li>
+    <a href="/staff">View Staff</a>
+</li>
+{% endblock %}
+{% block content %}
+<div class="jumbotron">
+    <h1>Today order count</h1>
+    <p>{% orderCount %}</p>
+</div>
+<div class="jumbotron">
+    <h1>Today order total</h1>
+    <p>{% todayTolOrder %}</p>
+</div>
+{% endblock %}
