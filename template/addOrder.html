@@ -1,0 +1,52 @@
+{% extends 'homemenu.html' %}
+{% block title %}Shop List{% endblock %}
+{% block nav %}
+<li>
+    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Products</a>
+    <ul class="collapse list-unstyled" id="pageSubmenu">
+        <li>
+            <a href="/product">Products View</a>
+        </li>
+        <li>
+            <a href="/addproduct">Add Product</a>
+        </li>
+        <li>
+            <a href="/updateproduct">Update Product</a>
+        </li>
+        <li>
+            <a href="/deleteproduct">Delete Product</a>
+        </li>
+    </ul>
+</li>
+<li>
+    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Orders</a>
+    <ul class="collapse list-unstyled" id="pageSubmenu">
+        <li>
+            <a href="/order">Order View</a>
+        </li>
+        <li>
+            <a href="/addorder">Add Order</a>
+        </li>
+        <li>
+            <a href="/updateorder">Update Order</a>
+        </li>
+        <li>
+            <a href="/deleteorder">Delete Order</a>
+        </li>
+    </ul>
+</li>
+{% endblock %}
+{% block content %}
+<div class="jumbotron">
+                <h1>Add Order</h1>
+                <form class="form-signin" method="GET">
+                    <label for="inputordID" class="sr-only">Order ID</label>
+                    <input type="name" name="inputordID" id="orderID" class="form-control" placeholder="Order ID" required autofocus>
+                    <label for="inputproID" class="sr-only">Product ID</label>
+                    <input type="name" name="inputproID" id="productID" class="form-control" placeholder="Product ID" required autofocus>
+                    <label for="inputordAmount" class="sr-only">Order Amount</label>
+                    <input type="number" name="inputordAmount" id="orderAmount" class="form-control" placeholder="Order Amount" required>
+                    <button id="submit" class="btn btn-lg btn-primary btn-block" type="submit">Add Order</button>
+                </form>
+            </div>
+{% endblock %}
