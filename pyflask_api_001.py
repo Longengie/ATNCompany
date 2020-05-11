@@ -285,10 +285,3 @@ def logout():
         session['logged_in_flag'] = False
     return redirect(url_for('home'))
 
-@app.errorhandler(404)
-def page_not_found(e):
-    return render_template("404.html")
-
-@app.errorhandler(500)
-def page_not_found(e):
-    return render_template("404.html")
