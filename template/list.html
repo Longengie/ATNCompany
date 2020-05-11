@@ -1,0 +1,27 @@
+{% extends 'homemenu.html' %}
+{% block title %}Your profile{% endblock %}
+{% block nav %}
+<!- No special menu->
+{% endblock %}
+{% block content %}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Staff ID</th>
+            <th>Fullname</th>
+            <th>Department</th>
+            <th>Role</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for staff in  List %}
+        <tr>
+            <th>{{ staff["StaffID"] }}</th>
+            <th>{{ staff["FullName"] }}</th>
+            <th>{{ staff["Department"] }}</th>
+            <th>{{ staff["Role"] }}</th>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
