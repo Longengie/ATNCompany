@@ -1,0 +1,67 @@
+{% extends 'homemenu.html' %}
+{% block title %}Shop List{% endblock %}
+{% block nav %}
+<li>
+    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Products</a>
+    <ul class="collapse list-unstyled" id="pageSubmenu">
+        <li>
+            <a href="/product">Products View</a>
+        </li>
+        <li>
+            <a href="/addproduct">Add Product</a>
+        </li>
+        <li>
+            <a href="/updateproduct">Update Product</a>
+        </li>
+        <li>
+            <a href="/deleteproduct">Delete Product</a>
+        </li>
+    </ul>
+</li>
+<li>
+    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Orders</a>
+    <ul class="collapse list-unstyled" id="pageSubmenu">
+        <li>
+            <a href="/order">Order View</a>
+        </li>
+        <li>
+            <a href="/addorder">Add Order</a>
+        </li>
+        <li>
+            <a href="/updateorder">Update Order</a>
+        </li>
+        <li>
+            <a href="/deleteorder">Delete Order</a>
+        </li>
+    </ul>
+</li>
+{% endblock %}
+{% block content %}
+<h1>Order List</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Order ID</th>
+            <th>Product ID</th>
+            <th>Order Amount</th>
+            <th>Order Sum</th>
+            <th>Department</th>
+            <th>Staff ID</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for order in  orderList %}
+        <tr>
+            <th>{{ order["orderID"] }}</th>
+            <th>{{ order["productID"] }}</th>
+            <th>{{ order["orderAmount"] }}</th>
+            <th>{{ order["orderSum"] }}</th>
+            <th>{{ order["Department"] }}</th>
+            <th>{{ order["StaffID"] }}</th>
+            <th>{{ order["Date"] }}</th>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
