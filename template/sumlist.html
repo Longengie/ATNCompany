@@ -1,0 +1,41 @@
+{% extends 'homemenu.html' %}
+{% block title %}Shop List{% endblock %}
+{% block nav %}
+<li>
+    <a href="/summary">Summary Report</a>
+</li>
+<li>
+    <a href="/todayorder">Today Orders</a>
+</li>
+<li>
+    <a href="/staff">View Staff</a>
+</li>
+{% endblock %}
+{% block content %}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Order ID</th>
+            <th>Product ID</th>
+            <th>Order Amount</th>
+            <th>Order Sum</th>
+            <th>Department</th>
+            <th>Staff ID</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for order in  List %}
+        <tr>
+            <th>{{ order["orderID"] }}</th>
+            <th>{{ order["productID"] }}</th>
+            <th>{{ order["orderAmount"] }}</th>
+            <th>{{ order["orderSum"] }}</th>
+            <th>{{ order["Department"] }}</th>
+            <th>{{ order["StaffID"] }}</th>
+            <th>{{ order["Date"] }}</th>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
