@@ -32,7 +32,7 @@ psycopg2==2.8.5
 pycparser==2.20
 pycryptodomex==3.9.7
 pyee==7.0.1
-pyload-ng==0.5.0a5.dev545
+pyload-ng==0.5.0b3.dev35
 pymango==0.1.1
 pymongo==3.10.1
 pyOpenSSL==19.1.0
